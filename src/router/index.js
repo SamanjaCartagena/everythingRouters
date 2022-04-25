@@ -19,7 +19,7 @@ const routes=[
     },
     {
         path:'/brazil', name:'brazil', 
-        component:() => import('../views/BrazilPage')
+        component:() => import(/* webpackChunkName:"brazil" */'@/views/BrazilPage')
     },
     {
         path:'/hawaii',
@@ -41,6 +41,7 @@ const routes=[
 const router = createRouter({
     history:createWebHistory(),
     routes,
+    linkActiveClass:'vue-school-active-link'
 })
 
 export default router;

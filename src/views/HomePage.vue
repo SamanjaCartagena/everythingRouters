@@ -3,6 +3,7 @@
   <h1>All Destinations</h1>
   <div class="destinations">
   </div>
+  <div v-if="destinations.length >0">
   <router-link 
   v-for="destination in destinations" 
   :key="destination.id"
@@ -11,6 +12,7 @@
   ><h2>{{destination.name}}</h2>
   <img :src="`/images/${destination.image}`"
    :alt="destination.name">  </router-link>
+  </div>
 </div>
 </template>
 

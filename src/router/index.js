@@ -35,7 +35,8 @@ const routes=[
         path:'/panama',
         name:'panama',
         component:PanamaPage
-    }
+    },
+    {path:'/destination/:id', component:() => import('@/views/DestinationShow.vue')}
 ];
 
 const router = createRouter({

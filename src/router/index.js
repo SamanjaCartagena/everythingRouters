@@ -2,7 +2,6 @@ import {createRouter, createWebHistory} from 'vue-router';
 
 import HomePage from '../views/HomePage.vue';
 import AboutPage from '../views/AboutPage.vue';
-import BrazilPage from '../views/BrazilPage.vue';
 import HawaiiPage from '../views/HawaiiPage.vue';
 import JamaicaPage from '../views/JamaicaPage.vue';
 import PanamaPage from '../views/PanamaPage.vue';
@@ -19,7 +18,8 @@ const routes=[
         component:AboutPage
     },
     {
-        path:'/brazil', name:'brazil', component:BrazilPage
+        path:'/brazil', name:'brazil', 
+        component:() => import('../views/BrazilPage')
     },
     {
         path:'/hawaii',
